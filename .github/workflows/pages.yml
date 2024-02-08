@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [21.x]
     steps:
       - uses: actions/checkout@v3
 
@@ -31,7 +31,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8.5.1
+          version: 8.6.1
 
       - run: pnpm install
       - run: pnpm build --base /${{ github.event.repository.name }}
